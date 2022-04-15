@@ -35,7 +35,7 @@ const EmailList = ({ emails, setId, value, n }) => {
                         important && <span className={styles.important}>Important!</span>
                     }
                     <ReactMarkdown className={styles.text}>
-                        {cutText(body, 9)}
+                        {cutText(body, 15)}
                     </ReactMarkdown>
                 </li>
                )
