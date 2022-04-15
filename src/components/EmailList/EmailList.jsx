@@ -2,7 +2,7 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import styles from './EmailList.module.scss'
 
-const EmailList = ({ emails, setId, value, n }) => {
+const EmailList = ({ emails, setId, value }) => {
 
     const cutText = (text, n) => {
         const array = text.split(' ')
@@ -14,8 +14,9 @@ const EmailList = ({ emails, setId, value, n }) => {
                 }
             })
             let [start] = matches
+            if(!start) return ''
             if (array.length - start < n) start = array.length-n
-            const newArr = array.slice(start, start+9)
+            const newArr = array.slice(start, start+n)
             if(start !== 0) newArr.unshift('...')
             if(array.length > start + n) newArr.push('...')
             return newArr.join(' ')
