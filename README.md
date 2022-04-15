@@ -1,3 +1,3 @@
 # Production
 
-https://vercel.com/dsvarin/mini-mail-app
+https://mini-mail-app.vercel.app/
