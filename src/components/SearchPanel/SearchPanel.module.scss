@@ -1,0 +1,28 @@
+@import '/src/styles/variables';
+
+.input-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+    input {
+        height: 2rem;
+        width: 100%;
+        padding: 0 0.6rem;
+        border-radius: $border-radius;
+        border: 2px solid $ligthColor;
+        font-family: inherit;
+
+        &::placeholder {
+            color: $ligthColor;
+        }
+
+        &:focus-visible {
+           border: 1px solid $bckColorRoot;
+           outline: 1px solid $bckColorRoot;
+        }
+
+    }
+}
